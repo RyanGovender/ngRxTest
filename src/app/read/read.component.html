@@ -1,0 +1,17 @@
+<div class="col-md-12" *ngIf="tutorials">
+
+    <h3>My Cart</h3>
+    <ul>
+
+
+      <div (click)="delTutorial(i)" *ngFor="let tutorial of tutorials | async ; let i = index">
+        <div class="mt-1" *ngIf="i !=0">
+          <a  target="_blank">{{i}} - {{ tutorial.name }} R{{tutorial.price}}</a>
+          <button class="btn btn-danger" (click)="delTutorial(i)"> Delete</button>
+        </div>
+       
+      </div>
+      
+    </ul>
+  
+  </div>

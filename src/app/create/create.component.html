@@ -1,0 +1,23 @@
+
+
+<div class="row mt-3"  style="align-content: center;justify-content: center;display: flex;">
+  <div *ngFor="let product of products" >
+   <div class="col-md-12">
+
+ 
+    <div class="card" >
+      <img src="{{product.imageUrl}}" class="card-img-top" alt="..." height="200px" style="max-width: 150px;">
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">R{{product.price}}</p>
+        <button  class="btn btn-primary" (click)="addTutorial(product.name,product.imageUrl,product.price)">Add To Cart</button>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+ 
+ 
+
+ 
